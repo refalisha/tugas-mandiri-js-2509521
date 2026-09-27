@@ -138,6 +138,36 @@ console.log("Total Poin: " + totalPoin);
 // 3. Cetak hasil tierMember dan benefit ke Console.
 // 4. Tampilkan ringkasan hasil member (nama, total poin, tier, benefit) via dialog alert().
 
+// 1
+let tierMember = "";
+let benefit = "";
+
+// 2
+if (totalPoin >= 100) {
+    tierMember = "Platinum";
+    benefit = "Diskon 20% + Gratis 1 Minuman Signature";
+}else if (totalPoin >= 70) {
+    tierMember = "Gold";
+    benefit = "Diskon 10% di setiap transaksi";
+} else if (totalPoin >= 40) {
+    tierMember = "Silver";
+    benefit = "Diskon 5% untuk menu minuman";
+}else{
+    tierMember = "Bronze";
+    benefit = "Member Reguler (kumpulkan poin untuk naik tier)";
+}
+
+// 3
+console.log("Tier Member: " + tierMember);
+console.log("Benefit: " + benefit);
+
+// 4 
+alert(
+"Nama : " + namaPelanggan + "\n" +
+"Total Poin : " + totalPoin + "\n" +
+"Tier : " + tierMember + "\n" +
+"Benefit : " + benefit  
+);
 
 
 
@@ -150,13 +180,22 @@ console.log("Total Poin: " + totalPoin);
 // menjumlahkannya, dan mengembalikan (return) nilai total penjumlahannya.
 
 
+function hitungTotalPoin(p1, p2, p3) {
+    let Jumlah = p1 + p2 + p3;
+    return Jumlah;
+}
 
 
 // TODO 5B:
 // Buat fungsi "tentukanTierMember(poin)" yang menerima 1 parameter nilai poin,
 // dan mengembalikan (return) string nama tier beserta keterangannya.
 
-
+function tentukanTierMember(poin) {
+    if (poin >= 100) return "Platinum - Diskon 20% + Gratis 1 Minuman Signature";
+if (poin >= 70) return "Gold - Diskon 10% di setiap transaksi";
+if (poin >= 40) return "Silver - Diskon 5% untuk menu minuman";
+return "Bronze - Member Reguler (kumpulkan poin untuk naik tier)";
+}
 
 
 // TODO 5C:
@@ -165,6 +204,20 @@ console.log("Total Poin: " + totalPoin);
 // 2. Hitung total poin dan tentukan tier untuk simulasi Pelanggan C (misal poin: 15, 10, 5).
 // 3. Cetak data Pelanggan B dan C ke tab Console.
 
+// 1
+let poin_Pelanggan_B = hitungTotalPoin(35, 25, 20);
+let tier_pelanggan_B = tentukanTierMember(poin_Pelanggan_B);
+
+let poin_Pelanggan_c = hitungTotalPoin(15, 10, 5);
+let tier_pelanggan_c = tentukanTierMember(poin_Pelanggan_c);
+
+console.log("Data Pelanggan B");
+console.log ("Total Poin : " + poin_Pelanggan_B);
+console.log("Tier : " + tier_pelanggan_B);
+
+console.log("Data Pelanggan C");
+console.log ("Total Poin : " + poin_Pelanggan_c);
+console.log("Tier : " + tier_pelanggan_c);
 
 
 
