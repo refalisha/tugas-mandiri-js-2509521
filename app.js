@@ -228,7 +228,14 @@ console.log("Tier : " + tier_pelanggan_c);
 // TODO 6A:
 // Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
 
-
+let menuRekomendasi = [
+    "Ice Chocolate",
+    "Ice Cream Vanila",
+    "Croissant ",
+    "Waffle",
+    "Udang Asam Manis",
+];
+console.log("=== MENU REKOMENDASI UNTUK MEMBER ===");
 
 
 // TODO 6B:
@@ -237,8 +244,12 @@ console.log("Tier : " + tier_pelanggan_c);
 
 
 
-
+for (let i = 0; i < menuRekomendasi.length; i++) {
+    console.log(i + 1 + ". " + menuRekomendasi[i]);
+}
 // TODO 6C:
 // Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
 // Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
-
+console.log("-----------------------------------------------");
+console.log("Total Menu Favorit: " + menuRekomendasi.length + "Menu");
+console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
