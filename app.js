@@ -17,12 +17,10 @@
  * ============================================================
  */
 
-
 // ============================================================
 // AKTIVITAS 1: Setup Berkas & Integrasi JavaScript Eksternal
 // ============================================================
 // Menampilkan judul sistem ke tab Console (F12)
-
 
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
@@ -31,8 +29,6 @@
 // Mencetak Sebuah teks data "string"
 console.log("=== SISTEM POIN MEMBER KEDAI KOPI ==="); //mencetak sebuah teks judul
 console.log("Skrip app.js berhasil terhubung!"); // Teks untuk memastikan terhubung javascript dengan html
-
-
 
 // ============================================================
 // AKTIVITAS 2: Variabel & Dialog Interaktif
@@ -56,8 +52,6 @@ console.log("Nama kedai : " + NAMA_KEDAI);
 console.log("Nama kasir : " + namaKasir);
 console.log("Shift kerja : " + shiftKerja);
 
-
-
 // ---- DEMO PERBEDAAN LET vs CONST ----
 // TODO 2B:
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
@@ -65,7 +59,6 @@ console.log("Shift kerja : " + shiftKerja);
 
 namaKasir = "Kak Marchel"; // mengubah nama kasir dengan nama kasir lain
 console.log("Nama Kasir baru : " + namaKasir);
-
 
 // ---- BAGIAN 2B: INPUT INTERAKTIF & PENGANDAIAN DASAR ----
 // TODO 2C:
@@ -94,7 +87,6 @@ if (namaPelanggan) {
   console.log("Pelanggan yang Aktif: " + namaPelanggan);
 }
 
-
 // ============================================================
 // AKTIVITAS 3: Operasi Aritmatika — Akumulasi Poin Transaksi
 // ============================================================
@@ -122,8 +114,6 @@ console.log("Poin Merchandise: " + poinMerchandise);
 
 console.log("Total Poin: " + totalPoin);
 
-
-
 // ============================================================
 // AKTIVITAS 4: Percabangan if-else — Penentuan Tier Membership
 // ============================================================
@@ -144,32 +134,37 @@ let benefit = "";
 
 // 2
 if (totalPoin >= 100) {
-    tierMember = "Platinum";
-    benefit = "Diskon 20% + Gratis 1 Minuman Signature";
-}else if (totalPoin >= 70) {
-    tierMember = "Gold";
-    benefit = "Diskon 10% di setiap transaksi";
+  tierMember = "Platinum";
+  benefit = "Diskon 20% + Gratis 1 Minuman Signature";
+} else if (totalPoin >= 70) {
+  tierMember = "Gold";
+  benefit = "Diskon 10% di setiap transaksi";
 } else if (totalPoin >= 40) {
-    tierMember = "Silver";
-    benefit = "Diskon 5% untuk menu minuman";
-}else{
-    tierMember = "Bronze";
-    benefit = "Member Reguler (kumpulkan poin untuk naik tier)";
+  tierMember = "Silver";
+  benefit = "Diskon 5% untuk menu minuman";
+} else {
+  tierMember = "Bronze";
+  benefit = "Member Reguler (kumpulkan poin untuk naik tier)";
 }
 
 // 3
 console.log("Tier Member: " + tierMember);
 console.log("Benefit: " + benefit);
 
-// 4 
+// 4
 alert(
-"Nama : " + namaPelanggan + "\n" +
-"Total Poin : " + totalPoin + "\n" +
-"Tier : " + tierMember + "\n" +
-"Benefit : " + benefit  
+  "Nama : " +
+    namaPelanggan +
+    "\n" +
+    "Total Poin : " +
+    totalPoin +
+    "\n" +
+    "Tier : " +
+    tierMember +
+    "\n" +
+    "Benefit : " +
+    benefit,
 );
-
-
 
 // ============================================================
 // AKTIVITAS 5: Function — Membuat Fungsi yang Bisa Dipakai Ulang
@@ -179,24 +174,21 @@ alert(
 // Buat fungsi "hitungTotalPoin(p1, p2, p3)" yang menerima 3 parameter nilai poin,
 // menjumlahkannya, dan mengembalikan (return) nilai total penjumlahannya.
 
-
 function hitungTotalPoin(p1, p2, p3) {
-    let Jumlah = p1 + p2 + p3;
-    return Jumlah;
+  let Jumlah = p1 + p2 + p3;
+  return Jumlah;
 }
-
 
 // TODO 5B:
 // Buat fungsi "tentukanTierMember(poin)" yang menerima 1 parameter nilai poin,
 // dan mengembalikan (return) string nama tier beserta keterangannya.
 
 function tentukanTierMember(poin) {
-    if (poin >= 100) return "Platinum - Diskon 20% + Gratis 1 Minuman Signature";
-if (poin >= 70) return "Gold - Diskon 10% di setiap transaksi";
-if (poin >= 40) return "Silver - Diskon 5% untuk menu minuman";
-return "Bronze - Member Reguler (kumpulkan poin untuk naik tier)";
+  if (poin >= 100) return "Platinum - Diskon 20% + Gratis 1 Minuman Signature";
+  if (poin >= 70) return "Gold - Diskon 10% di setiap transaksi";
+  if (poin >= 40) return "Silver - Diskon 5% untuk menu minuman";
+  return "Bronze - Member Reguler (kumpulkan poin untuk naik tier)";
 }
-
 
 // TODO 5C:
 // Buktikan bahwa fungsi di atas bisa dipakai ulang (reusable):
@@ -212,14 +204,12 @@ let poin_Pelanggan_c = hitungTotalPoin(15, 10, 5);
 let tier_pelanggan_c = tentukanTierMember(poin_Pelanggan_c);
 
 console.log("Data Pelanggan B");
-console.log ("Total Poin : " + poin_Pelanggan_B);
+console.log("Total Poin : " + poin_Pelanggan_B);
 console.log("Tier : " + tier_pelanggan_B);
 
 console.log("Data Pelanggan C");
-console.log ("Total Poin : " + poin_Pelanggan_c);
+console.log("Total Poin : " + poin_Pelanggan_c);
 console.log("Tier : " + tier_pelanggan_c);
-
-
 
 // ============================================================
 // AKTIVITAS 6: Array & For Loop — Daftar Menu Rekomendasi
@@ -229,27 +219,24 @@ console.log("Tier : " + tier_pelanggan_c);
 // Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
 
 let menuRekomendasi = [
-    "Ice Chocolate",
-    "Ice Cream Vanila",
-    "Croissant ",
-    "Waffle",
-    "Udang Asam Manis",
+  "Ice Chocolate",
+  "Ice Cream Vanila",
+  "Croissant ",
+  "Waffle",
+  "Udang Asam Manis",
 ];
 console.log("=== MENU REKOMENDASI UNTUK MEMBER ===");
-
 
 // TODO 6B:
 // Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
 // "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
 
-
-
 for (let i = 0; i < menuRekomendasi.length; i++) {
-    console.log(i + 1 + ". " + menuRekomendasi[i]);
+  console.log(i + 1 + ". " + menuRekomendasi[i]);
 }
 // TODO 6C:
 // Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
 // Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
 console.log("-----------------------------------------------");
-console.log("Total Menu Favorit: " + menuRekomendasi.length + "Menu");
+console.log("Total Menu Favorit: " + menuRekomendasi.length + " Menu");
 console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
