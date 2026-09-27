@@ -22,11 +22,15 @@
 // AKTIVITAS 1: Setup Berkas & Integrasi JavaScript Eksternal
 // ============================================================
 // Menampilkan judul sistem ke tab Console (F12)
-console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
+
 
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
 
+// Mencetak sebuah nilai dengan cara "console.log"
+// Mencetak Sebuah teks data "string"
+console.log("=== SISTEM POIN MEMBER KEDAI KOPI ==="); //mencetak sebuah teks judul
+console.log("Skrip app.js berhasil terhubung!"); // Teks untuk memastikan terhubung javascript dengan html
 
 
 
@@ -40,6 +44,17 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
 
+// 1
+const NAMA_KEDAI = "allisa cafe"; // nama kedai yang sifat nya tetap
+
+// 2
+let namaKasir = "Kak cheline"; // nama kasir
+let shiftKerja = "18.00 - 23.00"; // shift kerja
+
+// 3
+console.log("Nama kedai : " + NAMA_KEDAI);
+console.log("Nama kasir : " + namaKasir);
+console.log("Shift kerja : " + shiftKerja);
 
 
 
@@ -48,7 +63,8 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
 
-
+namaKasir = "Kak Marchel"; // mengubah nama kasir dengan nama kasir lain
+console.log("Nama Kasir baru : " + namaKasir);
 
 
 // ---- BAGIAN 2B: INPUT INTERAKTIF & PENGANDAIAN DASAR ----
@@ -59,7 +75,24 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
 
+// 1
+alert("Selamat Datang di Aplikasi Kedai Kopi TerLezat!!");
 
+// 2
+let namaPelanggan = prompt("HALO! Jangan lupa Masukkan Nama yaa:");
+
+// 3
+
+if (namaPelanggan) {
+  //Jika namaPelanggan ada isi nya
+  alert("Halo, " + namaPelanggan + "!! Yuk Mulai Memesan.");
+  console.log("Pelanggan yang Aktif: " + namaPelanggan);
+} else {
+  //Jika namaPelanggan Kosong
+  alert("Nama kamu kosong. allisa cafe akan memanggil kamu Pelanggan setia.");
+  namaPelanggan = "Pelanggan Setia";
+  console.log("Pelanggan yang Aktif: " + namaPelanggan);
+}
 
 
 // ============================================================
@@ -73,6 +106,21 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
 
+// 1
+let poinKopi = 50;
+let poinMakanan = 25;
+let poinMerchandise = 75;
+
+// 2
+let totalPoin = poinKopi + poinMakanan + poinMerchandise;
+
+// 3
+console.log("=== RINCIAN POIN: " + namaPelanggan + " ===");
+console.log("Poin Kopi: " + poinKopi);
+console.log("Poin Makanan: " + poinMakanan);
+console.log("Poin Merchandise: " + poinMerchandise);
+
+console.log("Total Poin: " + totalPoin);
 
 
 
